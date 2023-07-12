@@ -1,0 +1,34 @@
+<mat-card class="mb-4 p-2">
+  <div class="flex justify-between">
+    <button mat-button [matMenuTriggerFor]="sortByMenu">
+      Sort by {{sort}}
+      <mat-icon>expand_more</mat-icon>
+      <mat-menu #sortByMenu="matMenu">
+        <button (click)="onSortSubmit('desc')" mat-menu-item>desc</button>
+        <button (click)="onSortSubmit('asc')" mat-menu-item>asc</button>
+      </mat-menu>
+    </button>
+    <div class="flex item-center">
+      <div>
+        <button mat-button [matMenuTriggerFor]="menu">
+          Show Item {{itemCount}}
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button (click)="onItemSubmit(12)" mat-menu-item>12</button>
+          <button (click)="onItemSubmit(24)" mat-menu-item>24</button>
+          <button (click)="onItemSubmit(36)" mat-menu-item>36</button>
+        </mat-menu>
+        <button>
+          <mat-icon>view_list</mat-icon>
+        </button>
+        <button>
+          <mat-icon>view_module</mat-icon>
+        </button>
+        <button>
+          <mat-icon>view_comfy</mat-icon>
+        </button>
+      </div>
+  </div>
+  </div>
+</mat-card>
