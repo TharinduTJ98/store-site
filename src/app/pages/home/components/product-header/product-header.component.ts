@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-header',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-header.component.css']
 })
 export class ProductHeaderComponent implements OnInit{
+  @Output() columnCountChange = new EventEmitter<number>();
   sort ='decs';
   itemCount = 12;
 
@@ -21,5 +22,9 @@ export class ProductHeaderComponent implements OnInit{
 
   onItemSubmit(count: number): void{
     this.itemCount = count;
+  }
+
+  onColumnUpdated(colsNum: number): void{
+    this.columnCountChange.emit(colsNum);
   }
 }

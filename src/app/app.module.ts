@@ -19,13 +19,19 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductHeaderComponent } from './pages/home/components/product-header/product-header.component';
+import { FiltersComponent } from './pages/home/components/filters/filters.component';
+import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProductHeaderComponent
+    ProductHeaderComponent,
+    FiltersComponent,
+    ProductBoxComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
